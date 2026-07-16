@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Canvas Accessibility Checker</title>
+  <link rel="stylesheet" href="sidepanel.css">
+</head>
+<body>
+  <div id="app">
+    <header class="hdr">
+      <div class="hdr-icon">✓</div>
+      <div>
+        <h1>Accessibility Checker</h1>
+        <p>Remember to rescan on each new page</p>
+        <p style="font-size:10px;color:#aaa;margin-top:2px">build v1.4</p>
+      </div>
+    </header>
+
+    <div id="start-view">
+      <button id="scan-btn" class="btn primary full">Scan this page</button>
+      <p class="hint">Runs only on the page you're viewing. Nothing is saved after you close this popup, and nothing leaves your browser.</p>
+    </div>
+
+    <div id="scanning-view" class="hidden">
+      <p class="hint">Scanning page…</p>
+    </div>
+
+    <div id="results-view" class="hidden">
+      <div class="summary-grid">
+        <div class="summary-card"><div class="num pass-num" id="pass-count">0</div><div class="lbl">Passed</div></div>
+        <div class="summary-card"><div class="num fail-num" id="fail-count">0</div><div class="lbl">Issues</div></div>
+        <div class="summary-card"><div class="num warn-num" id="manual-count">0</div><div class="lbl">Manual check</div></div>
+      </div>
+
+      <div class="actions-row">
+        <button id="walkthrough-btn" class="btn primary">Walk me through the fixes</button>
+        <button id="rescan-btn" class="btn">Rescan</button>
+      </div>
+
+      <div id="results-body"></div>
+      <div id="status-msg" class="status-msg hidden"></div>
+    </div>
+
+    <div id="walkthrough-view" class="hidden">
+      <div class="wt-progress">
+        <span id="wt-position">Issue 1 of 1</span>
+        <button id="wt-exit" class="btn small">Exit</button>
+      </div>
+      <div class="wt-card">
+        <div class="wt-category" id="wt-category"></div>
+        <div class="wt-title" id="wt-title"></div>
+        <div class="wt-detail" id="wt-detail"></div>
+        <div class="wt-fix">
+          <div class="wt-fix-label">How to fix it</div>
+          <div id="wt-fix-text"></div>
+        </div>
+      </div>
+      <div class="wt-nav">
+        <button id="wt-show" class="btn">Show me on the page</button>
+      </div>
+      <div class="wt-nav">
+        <button id="wt-prev" class="btn">← Previous</button>
+        <button id="wt-next" class="btn primary">Next →</button>
+      </div>
+    </div>
+  </div>
+  <script src="sidepanel.js"></script>
+</body>
+</html>

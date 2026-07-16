@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Canvas Accessibility Checker",
+  "version": "1.4",
+  "description": "Scan the current Canvas page for WCAG 2.1 AA issues and get guided, step-by-step fixes. No data is stored or sent anywhere.",
+  "permissions": ["activeTab", "scripting", "storage", "sidePanel"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  },
+  "action": {
+    "default_title": "Check this page for accessibility issues"
+  }
+}
