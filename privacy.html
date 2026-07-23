@@ -90,11 +90,12 @@
   </div>
 
   <h2>What the extension can access</h2>
-  <p>The extension uses three Chrome permissions, and no others:</p>
+  <p>The extension uses the following Chrome permissions:</p>
   <ul>
     <li><strong>activeTab</strong> — grants temporary access to the content of the single browser tab you're viewing, and only after you click the extension's icon or its "Scan"/"Show me" buttons. It cannot read any other tab, and this access is not persistent — it does not carry over automatically if you switch to a different tab.</li>
     <li><strong>scripting</strong> — lets the extension inject a scan function into that active tab to read the page's HTML (headings, links, images, form fields, computed text/background colors, etc.) and check it against accessibility criteria. This same mechanism is used to highlight a specific element on the page when you click "Show me."</li>
     <li><strong>sidePanel</strong> — lets the extension display its interface as a docked side panel instead of a popup. This does not grant any additional access to page content beyond what activeTab and scripting already provide.</li>
+    <li><strong>storage</strong> — lets the extension use <code>chrome.storage.session</code> to temporarily cache the tab's scan results so that you can close and reopen the panel as long as you're on that same page. Data is cleared upon exiting the browser or changing that tab to a new page.</li>
   </ul>
   <p>The extension does <strong>not</strong> request <code>host_permissions</code> or the broader <code>tabs</code> permission, meaning it cannot read the URL, title, or content of tabs you haven't actively invoked it on.</p>
 
@@ -118,7 +119,7 @@
   <p>If this policy changes, the "Last updated" date above will be revised accordingly. Since the extension makes no network requests, any future version that changed its data practices would require an updated build and a new Chrome Web Store review.</p>
 
   <h2>Contact</h2>
-  <p>Questions about this policy or the extension can be directed to: <strong>[your email or GitHub contact here]</strong></p>
+  <p>Questions about this policy or the extension can be directed to: <strong>courtells.dev@gmail.com</strong></p>
 
   <footer>
     Canvas Accessibility Checker
