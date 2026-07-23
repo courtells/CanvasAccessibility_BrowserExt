@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — Canvas Accessibility Checker</title>
+<style>
+  :root {
+    color-scheme: light;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    color: #1e1e1e;
+    background: #ffffff;
+    line-height: 1.6;
+  }
+  main {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 5rem;
+  }
+  h1 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+  }
+  .updated {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+  }
+  h2 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-top: 2.25rem;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid #eaeaea;
+  }
+  p {
+    margin: 0 0 1rem;
+  }
+  ul {
+    margin: 0 0 1rem;
+    padding-left: 1.25rem;
+  }
+  li {
+    margin-bottom: 0.5rem;
+  }
+  a {
+    color: #1a56db;
+  }
+  strong {
+    font-weight: 600;
+  }
+  .summary-box {
+    background: #f7f9fc;
+    border: 1px solid #e3e8f0;
+    border-radius: 10px;
+    padding: 1.1rem 1.25rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.97rem;
+  }
+  code {
+    background: #f2f2f2;
+    padding: 0.1em 0.4em;
+    border-radius: 4px;
+    font-size: 0.9em;
+  }
+  footer {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #eaeaea;
+    color: #777;
+    font-size: 0.85rem;
+  }
+</style>
+</head>
+<body>
+<main>
+  <h1>Privacy Policy — Canvas Accessibility Checker</h1>
+  <p class="updated">Last updated: July 23, 2026</p>
+
+  <p>Canvas Accessibility Checker ("the extension") is a Chrome extension that scans the Canvas page you are currently viewing for WCAG 2.1 AA accessibility issues. This policy explains exactly what data the extension accesses, how it's used, and what happens to it.</p>
+
+  <div class="summary-box">
+    <strong>Summary:</strong> The extension does not collect, store, or transmit any personal data. It has no server, no analytics, and no third-party integrations of any kind. Everything it does happens locally in your browser, on the page you're actively viewing.
+  </div>
+
+  <h2>What the extension can access</h2>
+  <p>The extension uses three Chrome permissions, and no others:</p>
+  <ul>
+    <li><strong>activeTab</strong> — grants temporary access to the content of the single browser tab you're viewing, and only after you click the extension's icon or its "Scan"/"Show me" buttons. It cannot read any other tab, and this access is not persistent — it does not carry over automatically if you switch to a different tab.</li>
+    <li><strong>scripting</strong> — lets the extension inject a scan function into that active tab to read the page's HTML (headings, links, images, form fields, computed text/background colors, etc.) and check it against accessibility criteria. This same mechanism is used to highlight a specific element on the page when you click "Show me."</li>
+    <li><strong>sidePanel</strong> — lets the extension display its interface as a docked side panel instead of a popup. This does not grant any additional access to page content beyond what activeTab and scripting already provide.</li>
+  </ul>
+  <p>The extension does <strong>not</strong> request <code>host_permissions</code> or the broader <code>tabs</code> permission, meaning it cannot read the URL, title, or content of tabs you haven't actively invoked it on.</p>
+
+  <h2>What data is stored, and for how long</h2>
+  <p>Scan results (which issues were found on a given page) are temporarily cached using Chrome's <code>chrome.storage.session</code> API, scoped to the current browser session only. This cache:</p>
+  <ul>
+    <li>Never leaves your device — there is no server for it to be sent to.</li>
+    <li>Is automatically cleared when you close your browser.</li>
+    <li>Is automatically cleared/replaced whenever you navigate to a different page or run a new scan.</li>
+  </ul>
+  <p>No data is written to permanent (<code>chrome.storage.local</code>) storage, no data is synced to a Google account, and no cookies or tracking identifiers are used.</p>
+
+  <h2>Third parties</h2>
+  <p>The extension does not use any analytics, advertising, or crash-reporting services. It makes no network requests of any kind — everything (scanning, highlighting, and displaying results) happens entirely within your browser.</p>
+  <p>The only outbound links in the extension are hyperlinks to <a href="https://aaardvarkaccessibility.com" target="_blank" rel="noopener">aaardvarkaccessibility.com</a>, which you may optionally click to read more about a specific WCAG success criterion. Visiting that site is subject to its own privacy policy, not this one.</p>
+
+  <h2>Children's privacy</h2>
+  <p>The extension is a tool for reviewing course content for accessibility and is intended for use by instructors, course designers, and accessibility staff. It does not knowingly collect any information from anyone, including children.</p>
+
+  <h2>Changes to this policy</h2>
+  <p>If this policy changes, the "Last updated" date above will be revised accordingly. Since the extension makes no network requests, any future version that changed its data practices would require an updated build and a new Chrome Web Store review.</p>
+
+  <h2>Contact</h2>
+  <p>Questions about this policy or the extension can be directed to: <strong>[your email or GitHub contact here]</strong></p>
+
+  <footer>
+    Canvas Accessibility Checker
+  </footer>
+</main>
+</body>
+</html>
